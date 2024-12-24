@@ -16,12 +16,11 @@ def retrieve_bmc_paper():  # -> str:
     Returns the link to the full paper as a string. 
     """
     # Setup query parameters
-    BMC_KEY = BMC_API_KEY
     BMC_BIOINFORMATICS_ISSN = "1471-2105"
     MAX_RESULTS = 1
     START_RESULT_INDEX = 1
 
-    url = f'https://api.springernature.com/meta/v2/json?api_key={BMC_KEY}&callback=&s={
+    url = f'https://api.springernature.com/meta/v2/json?api_key={BMC_API_KEY}&callback=&s={
         START_RESULT_INDEX}&p={MAX_RESULTS}&q=(issn:{BMC_BIOINFORMATICS_ISSN})'
 
     response = requests.request("GET", url)
