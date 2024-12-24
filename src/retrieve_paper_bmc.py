@@ -3,7 +3,7 @@ import requests
 from constants import BMC_API_KEY
 
 
-def retrieve_bmc_paper():  # -> str:
+def retrieve_bmc_paper() -> str:
     """Builds a query with personal API and a few settings
     such as:
       journal ISSN: for BMC Bioinformatics specifically;

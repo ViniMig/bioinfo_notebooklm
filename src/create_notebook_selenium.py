@@ -17,7 +17,7 @@ def find_and_click_button(wait: WebDriverWait, xpath: str) -> None:
     time.sleep(3)
 
 
-def submit_form_input(wait, xpath: str, text: str) -> None:
+def submit_form_input(wait: WebDriverWait, xpath: str, text: str) -> None:
     """Inserts text to input and hits 'RETURN' key"""
     elem = wait.until(EC.element_to_be_clickable((By.XPATH, xpath)))
     elem.send_keys(text)
