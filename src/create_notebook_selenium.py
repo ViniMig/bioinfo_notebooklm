@@ -8,7 +8,6 @@ import time
 
 from constants import *
 
-
 def find_and_click_button(wait: WebDriverWait, xpath: str) -> None:
     """Waits for given button xpath to be clickable and clicks"""
     wait.until(EC.element_to_be_clickable((By.XPATH, xpath))).click()
@@ -16,14 +15,12 @@ def find_and_click_button(wait: WebDriverWait, xpath: str) -> None:
     # Implicit wait of 3 seconds after clicking buttons
     time.sleep(3)
 
-
 def submit_form_input(wait: WebDriverWait, xpath: str, text: str) -> None:
     """Inserts text to input and hits 'RETURN' key"""
     elem = wait.until(EC.element_to_be_clickable((By.XPATH, xpath)))
     elem.send_keys(text)
     time.sleep(1)  # Take a breath
     elem.send_keys(Keys.RETURN)
-
 
 def create_notebooklm(paper_url: str) -> None:
     """Creates a new NotebookLM with audio summary of the 
