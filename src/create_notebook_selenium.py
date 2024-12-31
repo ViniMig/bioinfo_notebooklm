@@ -68,13 +68,14 @@ def create_notebooklm(paper_url: str) -> None:
 
     # Paste link to paper
     submit_form_input(wait=wait, xpath=URL_INPUT, text=paper_url)
-    time.sleep(15)  # wait a few seconds before going for audio
+    time.sleep(30)  # implicit wait of a few seconds before going for audio
 
     # Generate audio
     print("Creating audio summary...")
 
     # Clicks 'Generate' button
     find_and_click_button(wait=wait, xpath=GENERATE_AUDIO_BUTTON)
+    time.sleep(10) # implicit wait of additional 10 seconds before sharing
 
     # Share
     print("Sharing notebook...")
