@@ -1,6 +1,7 @@
 # Local files
 src/constants.py
 src/weekly_notebooklm.bat
+logs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
